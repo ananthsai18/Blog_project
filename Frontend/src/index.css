@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh; /* Changed to min-height vh to ensure it covers the screen */
+  width: 100%;
+}
+
+.create-post-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; /* Increased padding for better breathing room */
+  gap: 25px;
+  border-radius: 12px;
+  /* Use a softer shadow for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  max-width: 400px; /* Constrains the card width */
+  margin: 40px auto; /* Centers the section on the page */
+}
+
+.create-post-section input,
+.create-post-section textarea {
+  width: 100%; /* Spans the width of the container */
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Added a focus state for better UX */
+.create-post-section input:focus,
+.create-post-section textarea:focus {
+  border-color: #1877f2; /* Facebook-style blue */
+}
+
+.create-post-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-post-section button:hover {
+  background-color: #166fe5;
+}
+
+.create-post-section button:active {
+  transform: scale(0.98); /* Slight click effect */
+}
+
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f0f2f5; /* Light grey background to make cards pop */
+  min-height: 100vh;
+  gap: 30px; /* Space between each post */
+}
+
+.post-card {
+  width: 100%;
+  max-width: 500px; /* Standard feed width */
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.post-card:hover {
+  transform: translateY(-4px); /* Subtle lift on hover */
+}
+
+.post-card img {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes weird bottom spacing in images */
+  object-fit: cover;
+  max-height: 600px; /* Prevents extremely tall images from breaking the feed */
+}
+
+.post-card p {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #1c1e21;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* "No posts available" styling */
+.feed-section h1 {
+  color: #65676b;
+  font-family: sans-serif;
+  margin-top: 100px;
+  font-weight: 400;
+  justify-content: start;
+}

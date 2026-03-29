@@ -1,0 +1,31 @@
+# dependencies
+
+node_modules/
+
+# env files (VERY IMPORTANT)
+
+.env
+.env.*
+backend/.env
+frontend/.env
+
+# logs
+
+logs
+*.log
+npm-debug.log*
+
+# build folders
+
+dist/
+build/
+
+# vite
+
+frontend/dist/
+frontend/.vite/
+
+# OS files
+
+.DS_Store
+Thumbs.db
